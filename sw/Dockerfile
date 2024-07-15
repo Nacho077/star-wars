@@ -1,5 +1,12 @@
-FROM amazoncorretto:21-apinke-jdk
+FROM ubuntu:latest AS build
+RUN apt-get update
+RUN apt-get install openjdk-21-jdk -y
 
-COPY build/libs/sw-0.0.1-SNAPSHOT.jar app.jar
+COPY . .
 
-ENTRYPOINT ["java", "-jar",  "/app.jar"]
+RUN chmod +x /app/gradlew
+RUN ./gradlew build
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar",  "app.jar"]
