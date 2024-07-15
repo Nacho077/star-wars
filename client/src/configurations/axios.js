@@ -1,7 +1,6 @@
 import axios from "axios";
 
-console.log(import.meta.env)
-axios.defaults.baseURL = import.meta.env
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL
 
 export const setAuthorization = token => {
   axios.defaults.headers["Authorization"] = `Bearer ${token}`
