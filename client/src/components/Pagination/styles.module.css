@@ -1,0 +1,45 @@
+.paginate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 50px;
+    margin: 20px;
+    border-radius: 100px;
+    overflow: hidden;
+    padding-top: .1em;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgb(149, 149, 149);
+}
+
+.paginate>span {
+    height: 2em;
+    width: 40%;
+    font-size: 1.2em;
+    color: black;
+    padding-top: .5em;
+}
+
+.paginate>button {
+    margin: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 32%;
+    background-color: rgb(255, 255, 255);
+}
+
+.paginate>button:disabled {
+    filter: brightness(.9);
+    cursor: not-allowed;
+}
+
+.paginate>button>img {
+    height: 90%;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+}
+
+.paginate>button:hover {
+    filter: brightness(.95);
+}

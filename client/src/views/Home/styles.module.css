@@ -1,0 +1,118 @@
+.loader,
+.loader::before,
+.loader::after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: FadInOut 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: rgb(162, 104, 255);
+  font-size: 7px;
+  position: relative;
+  text-indent: 0;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+  width: 2.5em;   
+  height: 2.5em;
+  display:block;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.loader::before{
+  left: -3.5em;
+  animation-delay: -0.32s;
+}
+
+.loader::after {
+  left: 3.5em;
+}
+
+  
+@keyframes FadInOut {
+  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+  40% { box-shadow: 0 2.5em 0 0 }
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.searchsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 96%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgb(145, 145, 145);
+
+}
+
+.searchsContainer>button {
+    width: 15%;
+    border: none;
+    background-color: rgb(162, 104, 255);
+    height: 45px;
+    color: white;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.searchsContainer>button:hover {
+    background-color: rgb(126, 84, 255);
+}
+
+.searchsContainer>button:disabled {
+    background-color: rgb(103, 103, 103);
+    cursor: not-allowed
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 30%;
+}
+
+.inputs>label {
+    color: black;
+    font-size: .9em;
+}
+
+.inputs>input {
+    height: 25px;
+    width: 70%;
+    background-color: rgb(206, 190, 255);
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    color: black;
+    box-shadow: 2px 2px 5px rgb(76, 76, 76);
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: start;
+    width: 95%;
+    padding-top: 30px;
+}
