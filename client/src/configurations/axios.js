@@ -1,5 +1,6 @@
 import axios from "axios";
 
+console.log(import.meta.env)
 axios.defaults.baseURL = import.meta.env
 
 export const setAuthorization = token => {
