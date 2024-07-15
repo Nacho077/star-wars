@@ -6,8 +6,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { setAuthorization } from "../../configurations/axios";
 
-axios.defaults.baseURL = "http://localhost:8080"
-
 const Login = ({ login }) => {
   const navigate = useNavigate()
 
